@@ -40,14 +40,14 @@ while True:
 
         for line in content_json['response']['results']:
           for t in line['alternatives']:
-            output = output + t['transcript']
+            output = output +  t['transcript'] + '\n'
     except:
         print 'Wait for 10 seconds for audio detection...'
         time.sleep(10)
         continue
     break
 
-with open('audio_detection_output_{0}.txt'.format('filename'), 'w') as f:
+with open('audio_detection_output_{0}.txt'.format(filename), 'w') as f:
     f.write(output)
 
-print 'Finished writing audio detection ouput to file {0}.txt'.format(filename)
+print 'Finished writing audio detection ouput to file audio_detection_output_{0}.txt'.format(filename)
