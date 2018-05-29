@@ -1,6 +1,7 @@
 # audio-detection-translation
 
 $ virtualenv env
+
 $ source env/bin/activate
 
 1. Upload audio flac file to google storageo https://console.cloud.google.com/storage/browser/xera?project=adx-service
